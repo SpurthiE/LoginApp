@@ -7,6 +7,7 @@
 
 #import "DescriptionViewController.h"
 #import "Item.h"
+#import "KeychainItemWrapper.h"
 @interface DescriptionViewController () <UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property NSMutableArray *items;
@@ -31,14 +32,19 @@
   
   // 2. create bar button item
   UIBarButtonItem *plusButton = [[UIBarButtonItem alloc] initWithImage:image  style:UIBarButtonItemStylePlain target: self action:@selector(addItem)];
-  
+    UIBarButtonItem *logout = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logoutButtonAction)];
+    [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:plusButton,logout, nil] animated:false];
   // 3. set the "plusButton" as the right bar button item
   self.navigationItem.rightBarButtonItem = plusButton;
   
   self.navigationItem.title = @"To do list";
-//  self.navigationController.navigationBar.prefersLargeTitles = true;
 }
 
+-(void) logoutButtonAction {
+    KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
+    [keychainItem resetKeychainItem];
+    [self.navigationController popViewControllerAnimated:true];
+}
 - (void)addItem {
     
     // 1. initialize an alert controller

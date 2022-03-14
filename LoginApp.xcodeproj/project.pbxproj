@@ -10,6 +10,7 @@
 		EA26EB9D27D7BBC300C2770F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA26EB9C27D7BBC300C2770F /* GoogleService-Info.plist */; };
 		EA2C742F27DB3F6E00539B0B /* EmailValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C742E27DB3F6E00539B0B /* EmailValidation.m */; };
 		EA2C743127DB3F8500539B0B /* PasswordValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C743027DB3F8500539B0B /* PasswordValidation.m */; };
+		EA2C743627DB5D8000539B0B /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C743527DB5D7F00539B0B /* KeychainItemWrapper.m */; };
 		EA42B56227D64BA000194A06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA42B56127D64BA000194A06 /* AppDelegate.m */; };
 		EA42B56527D64BA000194A06 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA42B56427D64BA000194A06 /* SceneDelegate.m */; };
 		EA42B56827D64BA000194A06 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA42B56727D64BA000194A06 /* ViewController.m */; };
@@ -49,6 +50,8 @@
 		EA2C742E27DB3F6E00539B0B /* EmailValidation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmailValidation.m; sourceTree = "<group>"; };
 		EA2C743027DB3F8500539B0B /* PasswordValidation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordValidation.m; sourceTree = "<group>"; };
 		EA2C743227DB3F9A00539B0B /* PasswordValidation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordValidation.h; sourceTree = "<group>"; };
+		EA2C743427DB5D7F00539B0B /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		EA2C743527DB5D7F00539B0B /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		EA42B55D27D64BA000194A06 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA42B56027D64BA000194A06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA42B56127D64BA000194A06 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				EA57266E27D9D39F006AEF9A /* Model */,
 				EA42B56027D64BA000194A06 /* AppDelegate.h */,
 				EA42B56127D64BA000194A06 /* AppDelegate.m */,
+				EA2C743427DB5D7F00539B0B /* KeychainItemWrapper.h */,
+				EA2C743527DB5D7F00539B0B /* KeychainItemWrapper.m */,
 				EA42B56327D64BA000194A06 /* SceneDelegate.h */,
 				EA42B56427D64BA000194A06 /* SceneDelegate.m */,
 				EA57267627DA3D67006AEF9A /* Controller */,
@@ -362,6 +367,7 @@
 				EA2C743127DB3F8500539B0B /* PasswordValidation.m in Sources */,
 				EA42B56827D64BA000194A06 /* ViewController.m in Sources */,
 				EA2C742F27DB3F6E00539B0B /* EmailValidation.m in Sources */,
+				EA2C743627DB5D8000539B0B /* KeychainItemWrapper.m in Sources */,
 				EA42B56227D64BA000194A06 /* AppDelegate.m in Sources */,
 				EA42B57327D64BA200194A06 /* main.m in Sources */,
 				EA42B56527D64BA000194A06 /* SceneDelegate.m in Sources */,
