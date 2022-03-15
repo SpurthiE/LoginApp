@@ -147,21 +147,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItemCell" textLabel="0W7-Hj-miC" detailTextLabel="Wux-ao-QHV" style="IBUITableViewCellStyleSubtitle" id="iFJ-NX-wZd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItemCell" textLabel="gDd-Hs-xZ2" detailTextLabel="GZs-JL-tqd" style="IBUITableViewCellStyleSubtitle" id="iFJ-NX-wZd">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iFJ-NX-wZd" id="kzW-zO-wqf">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0W7-Hj-miC">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gDd-Hs-xZ2">
                                                     <rect key="frame" x="20" y="6" width="25" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wux-ao-QHV">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GZs-JL-tqd">
                                                     <rect key="frame" x="20" y="22.5" width="40.5" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -199,8 +199,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjB-GV-ZjV" userLabel="EmailView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5z-A8-OLi" userLabel="NameView">
                                 <rect key="frame" x="0.0" y="44" width="414" height="177"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="EwX-gl-mqE">
+                                        <rect key="frame" x="0.0" y="20" width="414" height="137"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dau-AK-gw7">
+                                        <rect key="frame" x="48" y="50" width="318" height="45"/>
+                                        <color key="textColor" name="BrandBlue"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="BrandLightBlue"/>
+                                <constraints>
+                                    <constraint firstItem="dau-AK-gw7" firstAttribute="leading" secondItem="J5z-A8-OLi" secondAttribute="leading" constant="48" id="F2P-3a-Xik"/>
+                                    <constraint firstAttribute="trailing" secondItem="dau-AK-gw7" secondAttribute="trailing" constant="48" id="IIZ-o0-Crt"/>
+                                    <constraint firstItem="EwX-gl-mqE" firstAttribute="leading" secondItem="J5z-A8-OLi" secondAttribute="leading" id="Mad-gv-nzE"/>
+                                    <constraint firstAttribute="bottom" secondItem="EwX-gl-mqE" secondAttribute="bottom" constant="20" id="Mu6-K3-gGW"/>
+                                    <constraint firstItem="EwX-gl-mqE" firstAttribute="top" secondItem="J5z-A8-OLi" secondAttribute="top" constant="20" id="N23-yb-viM"/>
+                                    <constraint firstItem="dau-AK-gw7" firstAttribute="top" secondItem="J5z-A8-OLi" secondAttribute="top" constant="50" id="PkL-1D-L5u"/>
+                                    <constraint firstAttribute="bottom" secondItem="dau-AK-gw7" secondAttribute="bottom" constant="82" id="RYR-ot-4kb"/>
+                                    <constraint firstAttribute="trailing" secondItem="EwX-gl-mqE" secondAttribute="trailing" id="fgz-iy-QmJ"/>
+                                    <constraint firstAttribute="height" constant="177" id="tMz-RV-Ltk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjB-GV-ZjV" userLabel="EmailView">
+                                <rect key="frame" x="0.0" y="121" width="414" height="177"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="Baa-yc-nOX">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
@@ -225,7 +251,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfp-Bs-BxZ" userLabel="PasswordView">
-                                <rect key="frame" x="0.0" y="121" width="414" height="177"/>
+                                <rect key="frame" x="0.0" y="198" width="414" height="177"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1j-QS-P5G">
                                         <rect key="frame" x="0.0" y="126" width="414" height="51"/>
@@ -269,14 +295,18 @@
                         <constraints>
                             <constraint firstItem="dfp-Bs-BxZ" firstAttribute="top" secondItem="YjB-GV-ZjV" secondAttribute="bottom" constant="-100" id="Gg0-Qs-e34"/>
                             <constraint firstItem="dfp-Bs-BxZ" firstAttribute="trailing" secondItem="XTP-ZD-jNR" secondAttribute="trailing" id="JDR-xH-clL"/>
-                            <constraint firstItem="YjB-GV-ZjV" firstAttribute="top" secondItem="XTP-ZD-jNR" secondAttribute="top" id="KCC-Ha-eKo"/>
                             <constraint firstItem="dfp-Bs-BxZ" firstAttribute="leading" secondItem="XTP-ZD-jNR" secondAttribute="leading" id="Wzi-Pj-JsV"/>
+                            <constraint firstItem="YjB-GV-ZjV" firstAttribute="top" secondItem="J5z-A8-OLi" secondAttribute="bottom" constant="-100" id="bPi-u1-b5i"/>
+                            <constraint firstItem="J5z-A8-OLi" firstAttribute="top" secondItem="XTP-ZD-jNR" secondAttribute="top" id="muB-v9-NLH"/>
+                            <constraint firstItem="J5z-A8-OLi" firstAttribute="leading" secondItem="XTP-ZD-jNR" secondAttribute="leading" id="sFx-n4-DKC"/>
                             <constraint firstItem="YjB-GV-ZjV" firstAttribute="leading" secondItem="XTP-ZD-jNR" secondAttribute="leading" id="tB3-JI-KeU"/>
+                            <constraint firstItem="XTP-ZD-jNR" firstAttribute="trailing" secondItem="J5z-A8-OLi" secondAttribute="trailing" id="xby-fP-Csn"/>
                             <constraint firstItem="YjB-GV-ZjV" firstAttribute="trailing" secondItem="XTP-ZD-jNR" secondAttribute="trailing" id="zR0-ks-tgG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="6Lg-JP-YqI" id="l3F-KG-C1M"/>
+                        <outlet property="nameTextField" destination="dau-AK-gw7" id="szV-aM-KJX"/>
                         <outlet property="passwordTextField" destination="ov5-6H-W84" id="pjs-NW-hhm"/>
                     </connections>
                 </viewController>

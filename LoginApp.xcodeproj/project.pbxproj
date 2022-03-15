@@ -21,7 +21,6 @@
 		EA42B57D27D64BA200194A06 /* LoginAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA42B57C27D64BA200194A06 /* LoginAppTests.m */; };
 		EA42B58727D64BA200194A06 /* LoginAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA42B58627D64BA200194A06 /* LoginAppUITests.m */; };
 		EA42B58927D64BA200194A06 /* LoginAppUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA42B58827D64BA200194A06 /* LoginAppUITestsLaunchTests.m */; };
-		EA57267127D9D3D5006AEF9A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57267027D9D3D5006AEF9A /* Item.m */; };
 		EA57267527DA1AFE006AEF9A /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57267427DA1AFE006AEF9A /* RegistrationViewController.m */; };
 		EA57267D27DA3E96006AEF9A /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57267C27DA3E96006AEF9A /* Alert.m */; };
 		EA85954C27D8B94600C56F54 /* DescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA85954B27D8B94600C56F54 /* DescriptionViewController.m */; };
@@ -69,8 +68,6 @@
 		EA42B58227D64BA200194A06 /* LoginAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA42B58627D64BA200194A06 /* LoginAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginAppUITests.m; sourceTree = "<group>"; };
 		EA42B58827D64BA200194A06 /* LoginAppUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginAppUITestsLaunchTests.m; sourceTree = "<group>"; };
-		EA57266F27D9D3C1006AEF9A /* Item.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
-		EA57267027D9D3D5006AEF9A /* Item.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		EA57267327DA1AFE006AEF9A /* RegistrationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
 		EA57267427DA1AFE006AEF9A /* RegistrationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 		EA57267B27DA3E83006AEF9A /* Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
@@ -139,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				EA57267A27DA3E5F006AEF9A /* Utility */,
-				EA57266E27D9D39F006AEF9A /* Model */,
 				EA42B56027D64BA000194A06 /* AppDelegate.h */,
 				EA42B56127D64BA000194A06 /* AppDelegate.m */,
 				EA2C743427DB5D7F00539B0B /* KeychainItemWrapper.h */,
@@ -172,15 +168,6 @@
 				EA42B58827D64BA200194A06 /* LoginAppUITestsLaunchTests.m */,
 			);
 			path = LoginAppUITests;
-			sourceTree = "<group>";
-		};
-		EA57266E27D9D39F006AEF9A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EA57266F27D9D3C1006AEF9A /* Item.h */,
-				EA57267027D9D3D5006AEF9A /* Item.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		EA57267627DA3D67006AEF9A /* Controller */ = {
@@ -361,7 +348,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA57267127D9D3D5006AEF9A /* Item.m in Sources */,
 				EA85954C27D8B94600C56F54 /* DescriptionViewController.m in Sources */,
 				EA57267D27DA3E96006AEF9A /* Alert.m in Sources */,
 				EA2C743127DB3F8500539B0B /* PasswordValidation.m in Sources */,
