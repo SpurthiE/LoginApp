@@ -6,7 +6,6 @@
 //
 
 #import "RegistrationViewController.h"
-#import "DescriptionViewController.h"
 #import "PasswordValidation.h"
 #import "EmailValidation.h"
 #import "Alert.h"
@@ -24,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];    
 }
+
 - (IBAction)registerPressed:(UIButton *)sender {
     Alert *alert = [[Alert alloc]init];
     PasswordValidation *passwordValidaton = [[PasswordValidation alloc] init];
@@ -32,15 +32,8 @@
         if ([emailvalidation validateEmailWithString:_emailTextField.text]) {
             if (![_passwordTextField.text  isEqual: @""]) {
                 if ([passwordValidaton isValidPassword:_passwordTextField.text]) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [alert alertWithOneBtn:self title:@"Error" message:@"Registration Successful"];
-                        KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
-                        [keychainItem setObject:self.passwordTextField.text forKey:(__bridge id)kSecValueData];
-                        [keychainItem setObject:self.emailTextField.text forKey:(__bridge id)kSecAttrAccount];
-                        self.emailTextField.text = @"";
-                        self.passwordTextField.text = @"";
-                        self.nameTextField.text = @"";
-                    });
+                    [self storeRegisteredDetails];
+                    [alert alertWithOneBtn:self title:@"Success" message:@"Registration Successful"];
                 } else {
                     [alert alertWithOneBtn:self title:@"Error" message:@"Please Ensure that you have at least one lower case letter, one upper case letter, one digit and one special charcter"];
                 }
@@ -55,9 +48,14 @@
     }
 }
 
--(void)navigateToDescription {
-    DescriptionViewController *toDoList = [self.storyboard instantiateViewControllerWithIdentifier:@"DescriptionViewController"];
-    [self.navigationController pushViewController:toDoList animated:true];
+-(void)storeRegisteredDetails {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
+        [keychainItem setObject:self.passwordTextField.text forKey:(__bridge id)kSecValueData];
+        [keychainItem setObject:self.emailTextField.text forKey:(__bridge id)kSecAttrAccount];
+        self.emailTextField.text = @"";
+        self.passwordTextField.text = @"";
+        self.nameTextField.text = @"";
+    });
 }
-
 @end

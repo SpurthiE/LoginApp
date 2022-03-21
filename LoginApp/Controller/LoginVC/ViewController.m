@@ -26,11 +26,6 @@
     [super viewDidLoad];
 }
 
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:true];
-    _emailTextField.text = @"";
-    _passwordTextField.text = @"";
-}
 - (IBAction)loginPressed:(UIButton *)sender {
     Alert *alert = [[Alert alloc]init];
     PasswordValidation *passwordValidaton = [[PasswordValidation alloc] init];
@@ -39,20 +34,7 @@
         if ([emailvalidation validateEmailWithString:_emailTextField.text]) {
             if (![_passwordTextField.text  isEqual: @""]) {
                 if ([passwordValidaton isValidPassword:_passwordTextField.text]) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
-                        NSData *password22 = [keychainItem objectForKey:(__bridge id)kSecValueData];
-                        NSString *emailData = [keychainItem objectForKey:(__bridge id)kSecAttrAccount];
-                        NSString* passwordValue = [[NSString alloc] initWithData:password22 encoding:NSUTF8StringEncoding];
-                        if ([self.emailTextField.text isEqual:emailData] && [self.passwordTextField.text isEqual:passwordValue]) {
-                            [self navigateToDescription];
-                            self.emailTextField.text = @"";
-                            self.passwordTextField.text = @"";
-                        } else {
-                            [alert alertWithOneBtn:self title:@"Alert" message:@"User Not Found"];
-                        }
-                    });
-                    
+                    [self validateLoginDetails];
                 } else {
                     [alert alertWithOneBtn:self title:@"Error" message:@"Please Ensure that you have at least one lower case letter, one upper case letter, one digit and one special"];
                 }
@@ -67,6 +49,21 @@
     }
 }
 
+-(void)validateLoginDetails {
+    Alert *alert = [[Alert alloc]init];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
+        NSData *password22 = [keychainItem objectForKey:(__bridge id)kSecValueData];
+        NSString *emailData = [keychainItem objectForKey:(__bridge id)kSecAttrAccount];
+        NSString* passwordValue = [[NSString alloc] initWithData:password22 encoding:NSUTF8StringEncoding];
+        if ([self.emailTextField.text isEqual:emailData] && [self.passwordTextField.text isEqual:passwordValue]) {
+            [self navigateToDescription];
+        } else {
+            [alert alertWithOneBtn:self title:@"Alert" message:@"User Not Found"];
+        }
+    });
+
+}
 
 - (IBAction)registerPressed:(UIButton *)sender {
     [self navigateToRegistration];

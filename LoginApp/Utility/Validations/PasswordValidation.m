@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 #import "PasswordValidation.h"
-#import "Alert.h"
 @implementation PasswordValidation: NSObject
 -(BOOL)isValidPassword:(NSString *)passwordString
 {

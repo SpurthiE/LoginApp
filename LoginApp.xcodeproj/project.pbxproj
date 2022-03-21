@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA26EB9D27D7BBC300C2770F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA26EB9C27D7BBC300C2770F /* GoogleService-Info.plist */; };
 		EA2C742F27DB3F6E00539B0B /* EmailValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C742E27DB3F6E00539B0B /* EmailValidation.m */; };
 		EA2C743127DB3F8500539B0B /* PasswordValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C743027DB3F8500539B0B /* PasswordValidation.m */; };
 		EA2C743627DB5D8000539B0B /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C743527DB5D7F00539B0B /* KeychainItemWrapper.m */; };
@@ -23,6 +22,7 @@
 		EA42B58927D64BA200194A06 /* LoginAppUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA42B58827D64BA200194A06 /* LoginAppUITestsLaunchTests.m */; };
 		EA57267527DA1AFE006AEF9A /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57267427DA1AFE006AEF9A /* RegistrationViewController.m */; };
 		EA57267D27DA3E96006AEF9A /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57267C27DA3E96006AEF9A /* Alert.m */; };
+		EA5F8C2D27E1C8770011891B /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5F8C2C27E1C8770011891B /* DataModel.m */; };
 		EA85954C27D8B94600C56F54 /* DescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA85954B27D8B94600C56F54 /* DescriptionViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EA26EB9C27D7BBC300C2770F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA2C742D27DB3F5A00539B0B /* EmailValidation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmailValidation.h; sourceTree = "<group>"; };
 		EA2C742E27DB3F6E00539B0B /* EmailValidation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmailValidation.m; sourceTree = "<group>"; };
 		EA2C743027DB3F8500539B0B /* PasswordValidation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordValidation.m; sourceTree = "<group>"; };
@@ -72,6 +71,8 @@
 		EA57267427DA1AFE006AEF9A /* RegistrationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 		EA57267B27DA3E83006AEF9A /* Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
 		EA57267C27DA3E96006AEF9A /* Alert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
+		EA5F8C2C27E1C8770011891B /* DataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		EA5F8C2E27E1C8850011891B /* DataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 		EA85954A27D8B94600C56F54 /* DescriptionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DescriptionViewController.h; sourceTree = "<group>"; };
 		EA85954B27D8B94600C56F54 /* DescriptionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DescriptionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,18 +137,17 @@
 			isa = PBXGroup;
 			children = (
 				EA57267A27DA3E5F006AEF9A /* Utility */,
+				EA793EDB27E8855D0096092C /* Model */,
+				EA5F8C2B27E1C8600011891B /* ViewModel */,
+				EA57267627DA3D67006AEF9A /* Controller */,
 				EA42B56027D64BA000194A06 /* AppDelegate.h */,
 				EA42B56127D64BA000194A06 /* AppDelegate.m */,
-				EA2C743427DB5D7F00539B0B /* KeychainItemWrapper.h */,
-				EA2C743527DB5D7F00539B0B /* KeychainItemWrapper.m */,
 				EA42B56327D64BA000194A06 /* SceneDelegate.h */,
 				EA42B56427D64BA000194A06 /* SceneDelegate.m */,
-				EA57267627DA3D67006AEF9A /* Controller */,
 				EA42B56927D64BA000194A06 /* Main.storyboard */,
 				EA42B56C27D64BA200194A06 /* Assets.xcassets */,
 				EA42B56E27D64BA200194A06 /* LaunchScreen.storyboard */,
 				EA42B57127D64BA200194A06 /* Info.plist */,
-				EA26EB9C27D7BBC300C2770F /* GoogleService-Info.plist */,
 				EA42B57227D64BA200194A06 /* main.m */,
 			);
 			path = LoginApp;
@@ -210,11 +210,45 @@
 		EA57267A27DA3E5F006AEF9A /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				EA57267B27DA3E83006AEF9A /* Alert.h */,
-				EA57267C27DA3E96006AEF9A /* Alert.m */,
+				EA793EDC27E8BE960096092C /* KeychainItemWrapper */,
+				EA793EDD27E8BECC0096092C /* Alert */,
 				EA2C743327DB3FA800539B0B /* Validations */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		EA5F8C2B27E1C8600011891B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA5F8C2C27E1C8770011891B /* DataModel.m */,
+				EA5F8C2E27E1C8850011891B /* DataModel.h */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA793EDB27E8855D0096092C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA793EDC27E8BE960096092C /* KeychainItemWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				EA2C743527DB5D7F00539B0B /* KeychainItemWrapper.m */,
+				EA2C743427DB5D7F00539B0B /* KeychainItemWrapper.h */,
+			);
+			path = KeychainItemWrapper;
+			sourceTree = "<group>";
+		};
+		EA793EDD27E8BECC0096092C /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				EA57267B27DA3E83006AEF9A /* Alert.h */,
+				EA57267C27DA3E96006AEF9A /* Alert.m */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,7 +355,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA42B57027D64BA200194A06 /* LaunchScreen.storyboard in Resources */,
-				EA26EB9D27D7BBC300C2770F /* GoogleService-Info.plist in Resources */,
 				EA42B56D27D64BA200194A06 /* Assets.xcassets in Resources */,
 				EA42B56B27D64BA000194A06 /* Main.storyboard in Resources */,
 			);
@@ -357,6 +390,7 @@
 				EA42B56227D64BA000194A06 /* AppDelegate.m in Sources */,
 				EA42B57327D64BA200194A06 /* main.m in Sources */,
 				EA42B56527D64BA000194A06 /* SceneDelegate.m in Sources */,
+				EA5F8C2D27E1C8770011891B /* DataModel.m in Sources */,
 				EA57267527DA1AFE006AEF9A /* RegistrationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

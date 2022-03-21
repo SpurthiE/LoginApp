@@ -7,6 +7,7 @@
 
 #import "DescriptionViewController.h"
 #import "KeychainItemWrapper.h"
+#import "DataModel.h"
 
 @interface DescriptionViewController () <UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -18,10 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     [self configureNavBar];
     self.tableView.dataSource = self;
-    [self fetchData];
+    [self fetchDataFromModel];
 }
 
 - (void)configureNavBar {
@@ -34,7 +34,7 @@
     [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:plusButton,logout, nil] animated:false];
   // 3. set the "plusButton" as the right bar button item
   self.navigationItem.rightBarButtonItem = plusButton;
-  self.navigationItem.title = @"To do list";
+  self.navigationItem.title = @"User Details";
 }
 
 -(void) logoutButtonAction {
@@ -43,24 +43,18 @@
     [self.navigationController popViewControllerAnimated:true];
 }
 
--(void) fetchData {
-    NSString *urlString = @"https://randomuser.me/api/?results=5";
-    NSURL *url = [NSURL URLWithString:urlString];
-    [[NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
-        NSError *err;
-        NSDictionary *descJson = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&err];
-        if (err) {
-            NSLog(@"Error: %@",err);
-            return;
+-(void) fetchDataFromModel {
+    DataModel *dataObj = [[DataModel alloc]init];
+    [dataObj fetchdata:^(NSMutableArray * results, NSError *error) {
+        if (error) {
+            NSLog(@"%@",error);
+        } else {
+            self.dataArray = results;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
         }
-        self.dataArray= descJson[@"results"];
-        NSLog(@"Data Array: %@", self.dataArray);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-        });
-        
-    }]resume];
+    }];
 }
 
 #pragma mark - UITableViewDataSource
@@ -70,8 +64,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ItemCell" forIndexPath:indexPath];
-    NSString *fullName = self.dataArray[indexPath.row][@"name"][@"title"];
+    NSString *fullName = self.dataArray[indexPath.row][@"name"][@"first"];
     cell.textLabel.text = fullName;
+    cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleTitle2];
     cell.detailTextLabel.text = self.dataArray[indexPath.row][@"gender"];
     return cell;
 }
