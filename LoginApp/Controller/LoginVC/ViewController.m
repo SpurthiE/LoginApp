@@ -8,8 +8,7 @@
 #import "ViewController.h"
 #import "DescriptionViewController.h"
 #import "RegistrationViewController.h"
-#import "PasswordValidation.h"
-#import "EmailValidation.h"
+#import "Validation.h"
 #import "Alert.h"
 #import "KeychainItemWrapper.h"
 
@@ -28,10 +27,10 @@
 
 - (IBAction)loginPressed:(UIButton *)sender {
     Alert *alert = [[Alert alloc]init];
-    PasswordValidation *passwordValidaton = [[PasswordValidation alloc] init];
-    EmailValidation *emailvalidation = [[EmailValidation alloc] init];
+    Validation *passwordValidaton = [[Validation alloc] init];
+    Validation *emailvalidation = [[Validation alloc] init];
     if (![_emailTextField.text  isEqual: @""]) {
-        if ([emailvalidation validateEmailWithString:_emailTextField.text]) {
+        if ([emailvalidation isValidEmail:_emailTextField.text]) {
             if (![_passwordTextField.text  isEqual: @""]) {
                 if ([passwordValidaton isValidPassword:_passwordTextField.text]) {
                     [self validateLoginDetails];

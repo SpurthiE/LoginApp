@@ -7,7 +7,7 @@
 
 #import "DescriptionViewController.h"
 #import "KeychainItemWrapper.h"
-#import "DataModel.h"
+#import "NetworkApi.h"
 
 @interface DescriptionViewController () <UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -44,7 +44,7 @@
 }
 
 -(void) fetchDataFromModel {
-    DataModel *dataObj = [[DataModel alloc]init];
+    NetworkApi *dataObj = [[NetworkApi alloc]init];
     [dataObj fetchdata:^(NSMutableArray * results, NSError *error) {
         if (error) {
             NSLog(@"%@",error);

@@ -6,9 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DataModel.h"
+#import "NetworkApi.h"
 
-@implementation DataModel    
+@implementation NetworkApi
 - (void)fetchdata: (void (^)(NSMutableArray *, NSError *))completionBlock {
     NSString *urlString = @"https://randomuser.me/api/?results=5";
     NSURL *url = [NSURL URLWithString:urlString];

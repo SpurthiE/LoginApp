@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA2C742F27DB3F6E00539B0B /* EmailValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C742E27DB3F6E00539B0B /* EmailValidation.m */; };
-		EA2C743127DB3F8500539B0B /* PasswordValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C743027DB3F8500539B0B /* PasswordValidation.m */; };
+		EA2C743127DB3F8500539B0B /* Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C743027DB3F8500539B0B /* Validation.m */; };
 		EA2C743627DB5D8000539B0B /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2C743527DB5D7F00539B0B /* KeychainItemWrapper.m */; };
 		EA42B56227D64BA000194A06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA42B56127D64BA000194A06 /* AppDelegate.m */; };
 		EA42B56527D64BA000194A06 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA42B56427D64BA000194A06 /* SceneDelegate.m */; };
@@ -22,7 +21,7 @@
 		EA42B58927D64BA200194A06 /* LoginAppUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA42B58827D64BA200194A06 /* LoginAppUITestsLaunchTests.m */; };
 		EA57267527DA1AFE006AEF9A /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57267427DA1AFE006AEF9A /* RegistrationViewController.m */; };
 		EA57267D27DA3E96006AEF9A /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57267C27DA3E96006AEF9A /* Alert.m */; };
-		EA5F8C2D27E1C8770011891B /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5F8C2C27E1C8770011891B /* DataModel.m */; };
+		EA5F8C2D27E1C8770011891B /* NetworkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5F8C2C27E1C8770011891B /* NetworkApi.m */; };
 		EA85954C27D8B94600C56F54 /* DescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA85954B27D8B94600C56F54 /* DescriptionViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -44,10 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EA2C742D27DB3F5A00539B0B /* EmailValidation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmailValidation.h; sourceTree = "<group>"; };
-		EA2C742E27DB3F6E00539B0B /* EmailValidation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmailValidation.m; sourceTree = "<group>"; };
-		EA2C743027DB3F8500539B0B /* PasswordValidation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordValidation.m; sourceTree = "<group>"; };
-		EA2C743227DB3F9A00539B0B /* PasswordValidation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordValidation.h; sourceTree = "<group>"; };
+		EA2C743027DB3F8500539B0B /* Validation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Validation.m; sourceTree = "<group>"; };
+		EA2C743227DB3F9A00539B0B /* Validation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Validation.h; sourceTree = "<group>"; };
 		EA2C743427DB5D7F00539B0B /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		EA2C743527DB5D7F00539B0B /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		EA42B55D27D64BA000194A06 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,8 +68,8 @@
 		EA57267427DA1AFE006AEF9A /* RegistrationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 		EA57267B27DA3E83006AEF9A /* Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Alert.h; sourceTree = "<group>"; };
 		EA57267C27DA3E96006AEF9A /* Alert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Alert.m; sourceTree = "<group>"; };
-		EA5F8C2C27E1C8770011891B /* DataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
-		EA5F8C2E27E1C8850011891B /* DataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		EA5F8C2C27E1C8770011891B /* NetworkApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkApi.m; sourceTree = "<group>"; };
+		EA5F8C2E27E1C8850011891B /* NetworkApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkApi.h; sourceTree = "<group>"; };
 		EA85954A27D8B94600C56F54 /* DescriptionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DescriptionViewController.h; sourceTree = "<group>"; };
 		EA85954B27D8B94600C56F54 /* DescriptionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DescriptionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,10 +102,8 @@
 		EA2C743327DB3FA800539B0B /* Validations */ = {
 			isa = PBXGroup;
 			children = (
-				EA2C742D27DB3F5A00539B0B /* EmailValidation.h */,
-				EA2C742E27DB3F6E00539B0B /* EmailValidation.m */,
-				EA2C743027DB3F8500539B0B /* PasswordValidation.m */,
-				EA2C743227DB3F9A00539B0B /* PasswordValidation.h */,
+				EA2C743027DB3F8500539B0B /* Validation.m */,
+				EA2C743227DB3F9A00539B0B /* Validation.h */,
 			);
 			path = Validations;
 			sourceTree = "<group>";
@@ -220,8 +215,8 @@
 		EA5F8C2B27E1C8600011891B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				EA5F8C2C27E1C8770011891B /* DataModel.m */,
-				EA5F8C2E27E1C8850011891B /* DataModel.h */,
+				EA5F8C2C27E1C8770011891B /* NetworkApi.m */,
+				EA5F8C2E27E1C8850011891B /* NetworkApi.h */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -383,14 +378,13 @@
 			files = (
 				EA85954C27D8B94600C56F54 /* DescriptionViewController.m in Sources */,
 				EA57267D27DA3E96006AEF9A /* Alert.m in Sources */,
-				EA2C743127DB3F8500539B0B /* PasswordValidation.m in Sources */,
+				EA2C743127DB3F8500539B0B /* Validation.m in Sources */,
 				EA42B56827D64BA000194A06 /* ViewController.m in Sources */,
-				EA2C742F27DB3F6E00539B0B /* EmailValidation.m in Sources */,
 				EA2C743627DB5D8000539B0B /* KeychainItemWrapper.m in Sources */,
 				EA42B56227D64BA000194A06 /* AppDelegate.m in Sources */,
 				EA42B57327D64BA200194A06 /* main.m in Sources */,
 				EA42B56527D64BA000194A06 /* SceneDelegate.m in Sources */,
-				EA5F8C2D27E1C8770011891B /* DataModel.m in Sources */,
+				EA5F8C2D27E1C8770011891B /* NetworkApi.m in Sources */,
 				EA57267527DA1AFE006AEF9A /* RegistrationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

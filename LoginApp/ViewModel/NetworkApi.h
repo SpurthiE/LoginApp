@@ -6,7 +6,7 @@
 //
 #import <UIKit/UIKit.h>
 
-@interface DataModel: NSObject
+@interface NetworkApi: NSObject
 - (void)fetchdata: (void (^)(NSMutableArray *, NSError *))completionBlock;
 @end
 
