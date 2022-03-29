@@ -10,7 +10,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RegistrationViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UIButton *registerBtn;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+- (IBAction)registerPressed:(UIButton *)sender;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +110,9 @@
                     <navigationItem key="navigationItem" id="aKY-H6-rQe"/>
                     <connections>
                         <outlet property="emailTextField" destination="74b-AS-vmr" id="8Cu-E9-amV"/>
+                        <outlet property="loginButton" destination="YMv-tR-yTR" id="0W3-Sz-dEZ"/>
                         <outlet property="passwordTextField" destination="BKM-Og-xpj" id="76d-PN-4BJ"/>
+                        <outlet property="registerButton" destination="Cno-Zq-TP5" id="WLb-n9-vj4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -308,6 +310,7 @@
                         <outlet property="emailTextField" destination="6Lg-JP-YqI" id="l3F-KG-C1M"/>
                         <outlet property="nameTextField" destination="dau-AK-gw7" id="szV-aM-KJX"/>
                         <outlet property="passwordTextField" destination="ov5-6H-W84" id="pjs-NW-hhm"/>
+                        <outlet property="registerBtn" destination="j1j-QS-P5G" id="GB3-NA-UGa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hkc-e8-C3v" sceneMemberID="firstResponder"/>

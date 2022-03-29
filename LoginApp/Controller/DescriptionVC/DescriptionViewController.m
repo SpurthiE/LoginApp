@@ -10,8 +10,6 @@
 #import "NetworkApi.h"
 
 @interface DescriptionViewController () <UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *dataArray;
 
 @end
 

@@ -23,6 +23,10 @@
 		EA57267D27DA3E96006AEF9A /* Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = EA57267C27DA3E96006AEF9A /* Alert.m */; };
 		EA5F8C2D27E1C8770011891B /* NetworkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5F8C2C27E1C8770011891B /* NetworkApi.m */; };
 		EA85954C27D8B94600C56F54 /* DescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA85954B27D8B94600C56F54 /* DescriptionViewController.m */; };
+		EA8BAE9E27EC55EB00529C87 /* DescriptionViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8BAE9D27EC55EB00529C87 /* DescriptionViewControllerTests.m */; };
+		EA8BAEA027EC5E0000529C87 /* RegistrationViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8BAE9F27EC5E0000529C87 /* RegistrationViewControllerTests.m */; };
+		EAB3E41627E9A9C300A0B8DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAB3E41527E9A9C300A0B8DF /* Localizable.strings */; };
+		EAB54D2827F1B5CD00180C93 /* NetworkApiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB54D2727F1B5CD00180C93 /* NetworkApiTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,10 @@
 		EA5F8C2E27E1C8850011891B /* NetworkApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkApi.h; sourceTree = "<group>"; };
 		EA85954A27D8B94600C56F54 /* DescriptionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DescriptionViewController.h; sourceTree = "<group>"; };
 		EA85954B27D8B94600C56F54 /* DescriptionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DescriptionViewController.m; sourceTree = "<group>"; };
+		EA8BAE9D27EC55EB00529C87 /* DescriptionViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DescriptionViewControllerTests.m; sourceTree = "<group>"; };
+		EA8BAE9F27EC5E0000529C87 /* RegistrationViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewControllerTests.m; sourceTree = "<group>"; };
+		EAB3E41527E9A9C300A0B8DF /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		EAB54D2727F1B5CD00180C93 /* NetworkApiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkApiTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +152,7 @@
 				EA42B56E27D64BA200194A06 /* LaunchScreen.storyboard */,
 				EA42B57127D64BA200194A06 /* Info.plist */,
 				EA42B57227D64BA200194A06 /* main.m */,
+				EAB3E41527E9A9C300A0B8DF /* Localizable.strings */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
@@ -151,7 +160,8 @@
 		EA42B57B27D64BA200194A06 /* LoginAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				EA42B57C27D64BA200194A06 /* LoginAppTests.m */,
+				EAB54D2627F1B5B600180C93 /* ViewModel */,
+				EAB54D2527F1B58F00180C93 /* ViewController */,
 			);
 			path = LoginAppTests;
 			sourceTree = "<group>";
@@ -244,6 +254,24 @@
 				EA57267C27DA3E96006AEF9A /* Alert.m */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		EAB54D2527F1B58F00180C93 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA42B57C27D64BA200194A06 /* LoginAppTests.m */,
+				EA8BAE9D27EC55EB00529C87 /* DescriptionViewControllerTests.m */,
+				EA8BAE9F27EC5E0000529C87 /* RegistrationViewControllerTests.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EAB54D2627F1B5B600180C93 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EAB54D2727F1B5CD00180C93 /* NetworkApiTests.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA42B57027D64BA200194A06 /* LaunchScreen.storyboard in Resources */,
+				EAB3E41627E9A9C300A0B8DF /* Localizable.strings in Resources */,
 				EA42B56D27D64BA200194A06 /* Assets.xcassets in Resources */,
 				EA42B56B27D64BA000194A06 /* Main.storyboard in Resources */,
 			);
@@ -393,7 +422,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8BAE9E27EC55EB00529C87 /* DescriptionViewControllerTests.m in Sources */,
 				EA42B57D27D64BA200194A06 /* LoginAppTests.m in Sources */,
+				EA8BAEA027EC5E0000529C87 /* RegistrationViewControllerTests.m in Sources */,
+				EAB54D2827F1B5CD00180C93 /* NetworkApiTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -504,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

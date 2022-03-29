@@ -11,9 +11,6 @@
 #import "KeychainItemWrapper.h"
 
 @interface RegistrationViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
-@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 
 @end
 
