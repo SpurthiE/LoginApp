@@ -7,10 +7,10 @@
 
 #import <Foundation/Foundation.h>
 #import "NetworkApi.h"
+#import "Constants.h"
 
 @implementation NetworkApi
 - (void)fetchdata: (void (^)(NSMutableArray *, NSError *))completionBlock {
-    NSString *urlString = @"https://randomuser.me/api/?results=5";
     NSURL *url = [NSURL URLWithString:urlString];
     [[NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error != nil) {
@@ -21,7 +21,7 @@
             if (!jsonDict) {
                 completionBlock(nil, error);
             } else {
-                NSMutableArray *results = jsonDict[@"results"];
+                NSMutableArray *results = jsonDict[jsonResults];
                 NSLog(@"%@",results);
                 completionBlock(results, nil);
             }

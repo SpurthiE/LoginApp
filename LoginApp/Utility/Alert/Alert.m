@@ -8,12 +8,13 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "Alert.h"
+#import "Constants.h"
 
 @implementation Alert : NSObject
 
 - (void)alertWithOneBtn:(UIViewController *)alertController title:(NSString *)title message:(NSString *)message {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:ok style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:okAction];
     dispatch_async(dispatch_get_main_queue(), ^{
         [alertController presentViewController:alert animated:YES completion:nil];

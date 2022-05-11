@@ -11,6 +11,7 @@
 #import "Validation.h"
 #import "Alert.h"
 #import "KeychainItemWrapper.h"
+#import "Constants.h"
 
 @interface ViewController ()
 
@@ -26,22 +27,22 @@
     Alert *alert = [[Alert alloc]init];
     Validation *passwordValidaton = [[Validation alloc] init];
     Validation *emailvalidation = [[Validation alloc] init];
-    if (![_emailTextField.text  isEqual: @""]) {
+    if (![_emailTextField.text  isEqual: blankString]) {
         if ([emailvalidation isValidEmail:_emailTextField.text]) {
-            if (![_passwordTextField.text  isEqual: @""]) {
+            if (![_passwordTextField.text  isEqual: blankString]) {
                 if ([passwordValidaton isValidPassword:_passwordTextField.text]) {
                     [self validateLoginDetails];
                 } else {
-                    [alert alertWithOneBtn:self title:@"Error" message:@"Please Ensure that you have at least one lower case letter, one upper case letter, one digit and one special"];
+                    [alert alertWithOneBtn:self title: error message:validate_Password_Message];
                 }
             } else {
-                [alert alertWithOneBtn:self title:@"Error" message:@"password field shouldn't be empty"];
+                [alert alertWithOneBtn:self title:error message:blank_Password];
             }
         } else {
-            [alert alertWithOneBtn:self title:@"Error" message:@"Enter a valid email"];
+            [alert alertWithOneBtn:self title:error message: validate_Email];
         }
     } else {
-        [alert alertWithOneBtn:self title:@"Error" message:@"Email field shouldn't be empty"];
+        [alert alertWithOneBtn:self title:error message:blank_Email];
     }
 }
 
@@ -55,7 +56,7 @@
         if ([self.emailTextField.text isEqual:emailData] && [self.passwordTextField.text isEqual:passwordValue]) {
             [self navigateToDescription];
         } else {
-            [alert alertWithOneBtn:self title:@"Alert" message:@"User Not Found"];
+            [alert alertWithOneBtn:self title:alertMessage message:userNotFound];
         }
     });
 

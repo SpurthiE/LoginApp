@@ -28,22 +28,6 @@
     [super tearDown];
 }
 
-- (void)testLoginPressed {
-    [_loginVC loginPressed:(_loginVC.loginButton)];
-    _loginVC.emailTextField.text = @"spu@gmail.com";
-    [_loginVC loginPressed:(_loginVC.loginButton)];
-    _loginVC.emailTextField.text = @"com";
-    [_loginVC loginPressed:(_loginVC.loginButton)];
-    Validation *passwordValidaton = [[Validation alloc] init];
-    _loginVC.emailTextField.text = @"spu@gmail.com";
-    _loginVC.passwordTextField.text = @"abc";
-    [passwordValidaton isValidPassword:_loginVC.passwordTextField.text];
-    [_loginVC loginPressed:(_loginVC.loginButton)];
-    _loginVC.emailTextField.text = @"spu@gmail.com";
-    _loginVC.passwordTextField.text = @"Spu*15678xyz";
-    [passwordValidaton isValidPassword:_loginVC.passwordTextField.text];
-    [_loginVC loginPressed:(_loginVC.loginButton)];
-}
 
 - (void)testRegisterPressed {
     [_loginVC registerPressed:(_loginVC.registerButton)];

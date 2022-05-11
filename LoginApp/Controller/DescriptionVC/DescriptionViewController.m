@@ -35,6 +35,70 @@
   self.navigationItem.title = @"User Details";
 }
 
+- (void)addItem {
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:@"ActionSheet"
+        message:@"Action Sheet example using UIAlertController "
+        preferredStyle:UIAlertControllerStyleActionSheet];
+    [actionSheet addAction:[UIAlertAction actionWithTitle:@"Cancel"
+                                                    style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        NSLog(@"Cancel button tapped");
+        [self dismissViewControllerAnimated:YES
+                                 completion:^{
+        }];
+    }]];
+    [actionSheet addAction:[UIAlertAction actionWithTitle:@"To Do List"style:UIAlertActionStyleDestructive
+                                                  handler:^(UIAlertAction
+                                                            *action) {
+        NSLog(@"To Do List button tapped");
+        [self dismissViewControllerAnimated:YES
+                                 completion:^{
+        }];
+    }]];
+    [self presentViewController:actionSheet animated:YES completion:nil];
+    
+    
+    
+//    // 1. initialize an alert controller
+//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Add a new to do list item" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+//
+//    // 2. add two text fields to the alert controller
+//    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+//        // code here
+//    }];
+//
+//    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+//        // code here
+//    }];
+//
+//    // 3. add placeholder text to the text fields
+//    alertController.textFields[0].placeholder = @"Enter the name of the item";
+//    alertController.textFields[1].placeholder = @"Enter the topic";
+//
+//    // 4. define action items "Cancel" and "Save"
+//    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+//        // handler code here
+//    }];
+//
+//    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        // handler code here
+//        // 1. insert the new item
+//        NSString *name = alertController.textFields[0].text;
+//        NSString *topic = alertController.textFields[1].text;
+//        Item *newItem = [[Item alloc] initWithName:name andWithTopic:topic];
+//        [self.items addObject:newItem];
+//
+//        // 2. create an indexpath a the end of items array
+//        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.items.count - 1 inSection:0];
+//
+//        // 3. insert indexpath into table view
+//        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    }];
+//    // 5. add actions to the alert controller
+//    [alertController addAction:cancelAction];
+//    [alertController addAction:saveAction];
+//    [self presentViewController:alertController animated:true completion:nil];
+}
+
 -(void) logoutButtonAction {
     KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"YourAppLogin" accessGroup:nil];
     [keychainItem resetKeychainItem];
